@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #fff;
+    background: rgb(9, 8, 8);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background fixed on scroll */
+  }
+
+  /* Add a hover effect to hamburger menu */
+  .hamburger-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .hamburger-icon:hover {
+    color: #f1edf4; /* Change color on hover */
+    transform: scale(1.1); /* Scale the icon slightly on hover */
+  }
+}
+
+@layer components {
+  /* Styling for Menu Links with responsive font sizes */
+  .menuLink {
+    @apply cursor-pointer hover:text-[#8a2be2];
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  /* Styling for tags */
+  .tags {
+    background-color: #e0125e;
+    color: #030303;
+    font-size: 12px;
+    padding: 3px 10px;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
